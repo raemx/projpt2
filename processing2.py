@@ -1,4 +1,19 @@
+#the provided text file appears to be a plain text 
+#extraction from a PDF document, likely a form or 
+# application with various sections such as general information, r
+# isk assessment, claims & insurance history, and declarations. H
+# owever, this text extraction doesn't contain the actual radio b
+# uttons (or checkboxes) typically found in forms. Instead, it incl
+# udes placeholders or annotations where these radio buttons might
+# have been in the original PDF.
 
+# Analyzing radio buttons in a PDF can be challenging due to several factors:
+
+# Non-Textual Elements: Radio buttons are graphical elements, not text. 
+# Text extraction tools often ignore these non-textual components or 
+# treat them as images, making it hard to interpret their state (checked 
+                                                               
+# or unchecked) from a text-only perspective.
 import fitz  # PyMuPDF
 from PIL import Image
 import json
@@ -52,7 +67,7 @@ def ocr_image(image_path):
     # Tesseract OCR API endpoint
     api_url = "https://api.ocr.space/parse/image"
 
-    # Replace 'your_api_key' with your actual API key from OCR.space
+    # ctual API key from OCR.space
     api_key = 'your_api_key'
 
     # Set up the request headers
@@ -75,7 +90,7 @@ def ocr_image(image_path):
             return None
 
 # Example usage
-image_path = "path/to/your/screenshot.png"
+image_path = ""
 result_text = ocr_image(image_path)
 
 if result_text:
